@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+
+}
+
+.container2 {
+    display: flex;
+    /* background-color: red; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-end;
+    width: 300px;
+    height: 250px;
+    border: 3px solid rgb(31, 27, 27);
+    padding-right: 80px;
+}
+
+h2 {
+    margin: 2px;
+    font-size: 50px;
+}
+
+button {
+    border: none;
+    background-color: white;
+    /* border: 1px solid black; */
+    transition: box-shadow 0.2s, transform 0.05s;
+}
+
+button:hover {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: scale(0.9);
+}

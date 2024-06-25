@@ -1,0 +1,125 @@
+cosas de js
+`` sirve como comillas en casos especiales como: while (true){
+        console.log(`El numero actual es: ${decenas}${unidades}`);
+estas comillas hacen que lo que tenga el signo $ no forme parte de el texto si no que llama a una variable, investigar mas
+
+' ', ' ' 
+ ^  ^  ^  ^ 
+\\\\\\\\\\
+
+https://console.cloud.google.com/google/maps-apis/onboard;flow=gmp-api-key-flow - pagina de google maps api javascript
+
+AIzaSyCClWTPHPZ-VCQREDhDtJxBEYK4D_mbJbM - clave api de google
+
+AIzaSyA3S3tkXiXsDDKJ07FTm8OunXMz5jjY8RI
+
+||
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators - libreria de funciones vanilla de java !!!
+
+rapid api - pagina de apis para integrar a nuestros proyectos
+
+codilink - pagina que nos permite desarrollar e ir viendo en el navegador, no hace falta VSC
+
+https://picocss.com/docs/container - libreria de estilos
+
+
+https://chat.openai.com/c/98e4d4e9-78d5-4251-be4b-ebd1eceeeab6
+
+stack overflow: buscar en Google si necesitas informacion, es la pagina mas usada en el mundo para programadores
+
+w3schools.com - pagina de documentación de phyton
+
+----------------------------------------------------------------------------
+
+codepen.io - pagina de ejemplos de otros programadores
+----------------------------------------------------------------------------------------
+
+ejemplo de como buscar una solución para una tarea en concreto:
+buscar en Google : stackoverflow add class HTML JavaScript #esto en función de lo que queramos hacer
+
+stackoverflow: es una pagina de programación en la que podemos encontrar montón de soluciones para nuestros proyectos
+----------------------------------------------------------------------------------------
+si usamos la linea de código 'debugger' lo que hace es parar el código en esa linea para poder inspeccionarlo en las HDD en chrome
+
+    var html = ''
+    for (customer in resultado){
+        debugger;
+        var row = `<tr>
+        <td> ${customer.firstname}</td>
+        <td>${customer.lastname}</td>
+        <td>${customer.email}</td>
+        <td>${customer.phone}</td>
+        <td>
+        <button class="btnDelete">Eliminar</button>
+        <button class="myButton">Editar</button>
+        </td>
+    </tr> `
+
+    html = html + row
+    }
+----------------------------------------------------------------------------------------
+
+!!! For of - bucle para iterar sobre iterables ( utiliza para iterar sobre los valores de un iterable (como un array, un string, un mapa, etc.).
+En el caso de un array, itera sobre cada elemento del array.
+En tu código, for (customer of resultado) significa que customer tomará el valor de cada objeto en el array resultado durante cada iteración) ej:
+
+document.addEventListener("DOMContentLoaded", init); //esta linea hace que corra la funcion search() al cargar la pagina
+const URL_API = 'http://localhost:3000/api/'
+
+function init() {
+    search()
+}
+
+async function search() {
+    var url = URL_API + 'customers'
+    var response = await fetch(url, {
+        "method": 'GET',
+        "headers": {
+            "Content-Type": 'application/json'
+        }
+    })
+
+    var resultado = await response.json();
+
+    console.log(resultado);// esto nos muestra por consola la base de datos del url que le dijimos
+
+    var html = ''
+    for (customer of resultado){
+        debugger;
+        var row = `<tr>
+        <td> ${customer.firstname}</td>
+        <td>${customer.lastname}</td>
+        <td>${customer.email}</td>
+        <td>${customer.phone}</td>
+        <td>
+        <button class="btnDelete">Eliminar</button>
+        <button class="myButton">Editar</button>
+        </td>
+    </tr> `
+
+    html = html + row
+    }
+    
+
+    document.querySelector('#customers > tbody').outerHTML = html
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
